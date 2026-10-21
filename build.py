@@ -1,6 +1,11 @@
 """Builds uyos.io: python3 build.py  ->  writes the .html files next to it (GitHub Pages serves them).
 Each page is (file, title, description, body); the header and footer are shared."""
+import sys
 from pathlib import Path
+
+# Stale since 2026-10-20: the published pages were edited by hand (Terms, Privacy, gender-neutral wording) and this
+# script would overwrite them with old text. Edit the .html files directly.
+sys.exit("build.py is out of date: edit the .html files directly (running it would undo published changes).")
 
 ROOT = Path(__file__).parent
 EMAIL = "hello@uyos.io"
